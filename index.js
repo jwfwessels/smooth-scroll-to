@@ -25,8 +25,6 @@ function getOffsets(el, container = window) {
     return result;
 }
 
-window.addEventListener('wheel', scrollHandler);
-window.addEventListener('scroll', scrollHandler);
 
 /*
  smoothScrollTo(to, duration)
@@ -34,11 +32,16 @@ window.addEventListener('scroll', scrollHandler);
  duration: 1 = instant, 20 = slow
  data: object to return when the animation ends via promises resolve function.
  */
-function smoothScrollTo({ to, container = window, duration = 20, data }) {
+const smoothScrollTo = ({ to, container = window, duration = 20, data }) => {
+    container.addEventListener('wheel', scrollHandler);
+    container.addEventListener('scroll', scrollHandler);
+
     return new Promise(resolve => {
         if (!animating) {
             animating = true;
+
             setScrollInterruptFlag(false);
+
             let toRect = getOffsets(to, container);
 
             let end = toRect.top;
