@@ -3,5 +3,9 @@
   "version": "0.0.1",
   "main": "index.js",
   "author": "JW Wessels <jw@praekelt.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@prk/eslint-config": "^0.0.9",
+    "@prk/prettier-config": "^0.0.2"
+  }
 }
