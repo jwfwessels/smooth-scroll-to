@@ -1,7 +1,19 @@
 {
   "name": "smooth-scroll-to-js",
   "version": "0.0.1",
-  "main": "index.js",
-  "author": "JW Wessels <jw@praekelt.com>",
-  "license": "MIT"
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "author": "JWF Wessels <jwfwessels@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "devDependencies": {
+    "@prk/eslint-config": "^0.0.9",
+    "@prk/prettier-config": "^0.0.2",
+    "microbundle": "^0.6.0"
+  }
 }

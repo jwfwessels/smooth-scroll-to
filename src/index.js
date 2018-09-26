@@ -25,10 +25,10 @@ function getOffsets(el, container = window) {
     return result;
 }
 
-
 /*
  smoothScrollTo(to, duration)
  to: a Dom Node
+ container: window
  duration: 1 = instant, 20 = slow
  data: object to return when the animation ends via promises resolve function.
  */
@@ -77,6 +77,6 @@ const smoothScrollTo = ({ to, container = window, duration = 20, data }) => {
             smoothScrollTo({ to, container, duration, data });
         }
     });
-}
+};
 
 export default smoothScrollTo;
