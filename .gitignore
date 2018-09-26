@@ -1,5 +1,31 @@
-lib
-node_modules
-yarn-error.log
-./tags
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
 /dist
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# result of running `icons` npm script
+/src/svgs/generated/*
+/src/assets/spriteMap.svg
+
+# result of running node-sass
+/src/**/*.css
+
+# mock api db snapshots
+/mock-api/snapshots/*
